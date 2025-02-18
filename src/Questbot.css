@@ -1,0 +1,194 @@
+.body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.body .header {
+  background-color: #000066;
+}
+
+.body .header img {
+  max-width: 300px;
+}
+
+.main{
+  display: flex;
+  align-items: flex-start;
+  margin: 25px;
+}
+
+.in{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 25px;
+}
+
+head{
+  color: #000;
+  padding: 10px;
+}
+
+.head h1{
+  font-family: monospace;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.head h3{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.in-head{
+  display: flex;
+  align-items: center;
+}
+
+.in-head img{
+  max-width: 50px;
+  margin: 0px 15px 0px 0px;
+}
+
+.inhold{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  border: 1px solid #7d7d7d;
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin-top: 15px;
+}
+
+.ph {
+  padding: 18px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  width: 90%;
+}
+
+.input-icon {
+  margin: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
+.input-icon:hover{
+  background-color: #c8c8c8;
+}
+
+
+.output{
+  max-width: 50%;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  color: #000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 500;
+}
+
+.in-out{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.output .err{
+  color: red;
+  margin: 25px;
+}
+
+.output .answer{
+  margin: 0px 0px 0px 25px;
+}
+
+.output img{
+  max-width: 40px;
+}
+
+
+.load {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #000066;
+}
+.load:before,
+.load:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+.load:after {
+    color: yellow;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
