@@ -1,0 +1,93 @@
+.persona-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('./Assets/8068.jpeg') no-repeat center center/cover;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .persona-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  .persona-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6); /* Increased shadow for contrast */
+    padding: 12px 25px; /* Added padding */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners for the title */
+  }
+  
+  .persona-options {
+    display: flex;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .persona-box {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .persona-box:hover {
+    transform: scale(1.08); /* Slightly increase scale on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  }
+  
+  .persona-icon {
+    font-size: 4.5rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .persona-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .persona-options {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .persona-box {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .persona-title {
+      font-size: 2rem;
+    }
+  }
+  

@@ -1,0 +1,105 @@
+/* Dashboard Container */
+.dashboard-container {
+    font-family: 'Arial', sans-serif;
+    padding: 30px;
+    background-color: #fff; /* ✅ Entire background is white */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Dashboard Tabs */
+.dashboard-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-trigger {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+}
+
+.tab-trigger:hover, .tab-trigger.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Overview Metrics */
+.overview-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+}
+
+.dashboard-card h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+.dashboard-card p {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Charts Grid */
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Ensure All Charts Have White Background */
+.dashboard-card-wide {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.dashboard-card-wide h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Remove Chart Shadows & Set White Background */
+.ResponsiveContainer .recharts-surface {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: none; /* ✅ No extra shadows */
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    .overview-metrics, .charts-container {
+        grid-template-columns: 1fr; /* Stacks elements in mobile view */
+    }
+}
